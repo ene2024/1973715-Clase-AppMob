@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Directivas
+      {{title}}
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -12,5 +12,19 @@
       <ion-title size="large">Directivas</ion-title>
     </ion-toolbar>
   </ion-header>
-  <div id="container"><app-lista></app-lista></div>
+  <div id="container">
+    <app-lista></app-lista>
+    <ion-button (click)="clickMe()" color="warning">
+      Hazme Click c;
+    </ion-button>
+    <br>
+    
+    <img [src]="imageUrl">
+
+    <p>Inserta el nombre del alumno en el campo</p>
+    <ion-input type="text" placeholder="Ingresa un nombre" [(ngModel)]="studentName"></ion-input>
+    <ion-label>El alumno se llama: <strong>{{studentName}}</strong></ion-label>
+  </div>
+
+  
 </ion-content>
