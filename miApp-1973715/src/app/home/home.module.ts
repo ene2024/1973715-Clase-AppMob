@@ -6,6 +6,8 @@ import { HomePage } from './home.page';
 
 import { HomePageRoutingModule } from './home-routing.module';
 import { ListaComponent } from '../lista/lista.component';
+import { TareasComponent } from '../tareas/tareas.component';
+import { AgregarTareaComponent } from '../agregar-tarea/agregar-tarea.component';
 
 @NgModule({
   imports: [
@@ -16,7 +18,9 @@ import { ListaComponent } from '../lista/lista.component';
   ],
   declarations: [
     HomePage,
-    ListaComponent
+    ListaComponent,
+    TareasComponent,
+    AgregarTareaComponent
   ]
 })
 export class HomePageModule {}

@@ -1,0 +1,68 @@
+:host {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  background-color: #FFFFFF; 
+  border-radius: 10px;
+  width: 375px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --color: #000000;
+  --ion-color-primary: #BB27A7;
+}
+
+* {
+    --background: #FFFFFF;
+}
+
+ion-header {
+    border-bottom: 1px solid #000000;
+    font-family: inter;
+    font-size: 30px; 
+    text-align: center;
+}
+
+ion-title {
+    --font-size: 30px;
+    --color: #000000;
+}
+
+form {
+    padding: 20px;
+}
+
+.campos > ion-label, .campos-fecha{
+    color:#000000;
+    font-weight: bold;
+    border: none;
+}
+
+ion-select, ion-input, ion-textarea {
+    border: 1px solid #000000;
+    --highlight-color-valid: #000000 !important;
+    --color: #000000;
+}
+
+ion-select {
+    box-sizing: content-box;
+    font-size: 15px;
+}
+
+ion-item {
+    --highlight-background-focused: transparent !important; 
+  --highlight-background-invalid: transparent !important; 
+  --border-color: transparent !important;
+  --highlight-color-focused: transparent !important; 
+  --highlight-color-valid: transparent !important;
+}
+
+
+.agregar-btn {
+    margin-top: 15px;
+    --background: #4FFFDF;
+    --color: #000000;
+    border-radius: 3px;
+}
+
+
