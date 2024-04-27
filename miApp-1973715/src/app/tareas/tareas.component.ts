@@ -9,16 +9,25 @@ import { TareasServicioService } from '../tareas-servicio.service';
 export class TareasComponent  implements OnInit {
   tareas: any[] = [];
 
-  constructor( private tareasService: TareasServicioService) { }
+  constructor( public tareasService: TareasServicioService) { }
 
   ngOnInit() {
-    this.tareasService.tarea$.subscribe( tarea => {
-      if (tarea) 
-        this.tareas.push(tarea);
+    this.tareasService.tarea$.subscribe((accion: any) => {
+      if (accion) {
+        if (accion.eliminar) {
+          this.eliminarTarea(accion.index);
+        } else {
+          this.tareas.push(accion);
+        }
+      }
     });
   }
 
   toggleDescripcion(tarea: any) {
     tarea.mostrarDescripcion = !tarea.mostrarDescripcion;
+  }
+
+  eliminarTarea(index: number) {
+    this.tareas.splice(index, 1);
   }
 }

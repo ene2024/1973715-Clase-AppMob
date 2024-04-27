@@ -32,3 +32,9 @@ ion-button {
     margin-right: auto;
     font-size: 18px;
 }
+
+ion-buttons {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}

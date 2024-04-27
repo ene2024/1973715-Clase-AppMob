@@ -11,7 +11,11 @@ export class TareasServicioService {
 
   constructor() { }
 
-  agregarTarea( tarea: any){
+  agregarTarea(tarea: any) {
     this.tareaSubject.next(tarea);
+  }
+
+  eliminarTarea(index: number) {
+    this.tareaSubject.next({ index, eliminar: true });
   }
 }

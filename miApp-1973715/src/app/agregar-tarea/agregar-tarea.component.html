@@ -6,11 +6,11 @@
   </ion-toolbar>
 </ion-header>
 
-  <form (ngSubmit)="agregarTarea()">
+  <form #tareasForm="ngForm" (ngSubmit)="agregarTarea()">
     <ion-item class="campos">
       <ion-label position="stacked">Nombre de la tarea</ion-label>
       <br>
-      <ion-input type="text" [(ngModel)]="tarea.titulo" name="titulo"></ion-input>
+      <ion-input required="true" type="text" [(ngModel)]="tarea.titulo" name="titulo"></ion-input>
     </ion-item>
     <ion-item class="campos campos-fecha">
       <ion-label position="stacked">Fecha estimada en que se completará:</ion-label>
@@ -31,7 +31,7 @@
     </ion-item>
     <ion-item class="campos">
       <ion-label position="stacked">Descripción</ion-label>
-      <ion-textarea rows="4" [(ngModel)]="tarea.descripcion" name="descripcion"></ion-textarea>
+      <ion-textarea required="true" rows="4" [(ngModel)]="tarea.descripcion" name="descripcion"></ion-textarea>
     </ion-item>
-    <ion-button class="agregar-btn" expand="block" type="submit">Agregar tarea</ion-button>
+    <ion-button class="agregar-btn" expand="block" type="submit" [disabled]="tareasForm.invalid">Agregar tarea</ion-button>
   </form>  
