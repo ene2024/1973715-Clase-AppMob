@@ -8,6 +8,7 @@ import { HomePageRoutingModule } from './home-routing.module';
 import { ListaComponent } from '../lista/lista.component';
 import { TareasComponent } from '../tareas/tareas.component';
 import { AgregarTareaComponent } from '../agregar-tarea/agregar-tarea.component';
+import { TareaDetalleComponent } from "../tarea-detalle/tarea-detalle.component";
 
 @NgModule({
   imports: [
@@ -20,7 +21,8 @@ import { AgregarTareaComponent } from '../agregar-tarea/agregar-tarea.component'
     HomePage,
     ListaComponent,
     TareasComponent,
-    AgregarTareaComponent
+    AgregarTareaComponent,
+    TareaDetalleComponent
   ]
 })
 export class HomePageModule {}

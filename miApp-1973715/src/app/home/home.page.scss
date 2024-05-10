@@ -4,7 +4,6 @@
 
 ion-header {
     border-bottom: 1px solid white;
-    font-family: inter;
     font-size: 30px; 
     text-align: center;
 }
@@ -19,4 +18,8 @@ ion-fab-button {
     --border-color: #49b1a8;
     margin-right: 30px;
     margin-bottom: 30px;
+}
+
+.toolbar-title {
+    overflow: unset;
 }

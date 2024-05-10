@@ -9,7 +9,7 @@ import { TareasServicioService } from '../tareas-servicio.service';
 export class TareasComponent  implements OnInit {
   tareas: any[] = [];
 
-  constructor( public tareasService: TareasServicioService) { }
+  constructor( public tareasService: TareasServicioService) {}
 
   ngOnInit() {
     this.tareasService.tarea$.subscribe((accion: any) => {
@@ -29,5 +29,9 @@ export class TareasComponent  implements OnInit {
 
   eliminarTarea(index: number) {
     this.tareas.splice(index, 1);
+
+    for (let i = index; i < this.tareas.length; i++) {
+      this.tareas[i].index = i;
+    }
   }
 }

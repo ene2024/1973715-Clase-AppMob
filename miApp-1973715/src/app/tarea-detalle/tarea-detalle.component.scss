@@ -1,0 +1,73 @@
+
+ion-header {
+    z-index: 99999;
+    border-bottom: 1px solid white;
+}
+
+.title-prn {
+    --background:#BB27A7;
+    overflow: unset;
+}
+
+.toolbar-title {
+    overflow: unset;
+}
+
+ion-content{
+    position: fixed;
+    z-index: 999;
+    --background: #BB27A7; 
+}
+
+
+.content {
+    background: #FFFFFF;
+    z-index: 99999;
+    margin: 20px;
+    margin-top: 80px;
+}
+
+.imagen {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.titulo-principal {
+    font-family: inter;
+    font-size: 30px; 
+    text-align: center;
+}
+
+.title {
+    --background: #FFFFFF;
+}
+
+.titulo-tarea {
+    --color: #BB27A7;
+    font-weight: bold;
+    font-size: 27px;
+    text-align: center;
+}
+
+p {
+    color: #000000;
+    font-weight: bold;
+    font-size: 20px;
+    margin-left: 30px;
+}
+
+span {
+    font-size: 18px;
+    color: #BB27A7;
+    margin-left: 30px;
+}
+
+img {
+    width: 300px;
+    height: 200px;
+}
+
+ion-button {
+    font-size: 30px
+}

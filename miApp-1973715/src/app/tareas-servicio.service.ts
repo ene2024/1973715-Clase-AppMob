@@ -6,6 +6,8 @@ import { BehaviorSubject } from 'rxjs';
 })
 export class TareasServicioService {
 
+  tareas: any[] = [];
+
   private tareaSubject = new BehaviorSubject<any>(null);
   tarea$ = this.tareaSubject.asObservable();
 
@@ -13,9 +15,15 @@ export class TareasServicioService {
 
   agregarTarea(tarea: any) {
     this.tareaSubject.next(tarea);
+    this.tareas.push(tarea);
   }
 
   eliminarTarea(index: number) {
     this.tareaSubject.next({ index, eliminar: true });
+    this.tareas.splice(index, 1);
+  }
+
+  getTarea(index: number) {
+    return this.tareas[index];
   }
 }
